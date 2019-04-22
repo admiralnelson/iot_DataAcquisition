@@ -1,8 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div style="position:fixed;z-index:20;right:0;padding:30px">
+    <button onclick="ShowGraph()">
+        <h1>Tampilkan Graf</h1>
+    </button>
 </div>
+<div class="toolbar" id="toolbar">
+    <div style="padding:30px">
+        <button onclick="Close()" style="float:right;">Close</button>
+        <label>Perangkat:</label>
+        <select id="deviceSelector">
+            <option value="" selected>Pilih perangkat?</option>
+        </select>
+    </div>        
+    <h4>Temperatur (c)</h4>
+    <div class="chartdiv" id="chartdiv1"></div>
+    <h4>Humidity (%)</h4>
+    <div class="chartdiv" id="chartdiv2"></div>
+    <h4>Sound (db)</h4>
+    <div class="chartdiv" id="chartdiv3"></div>
+</div>
+
+<div id="map"></div>    

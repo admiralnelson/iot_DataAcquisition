@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using System.ComponentModel.DataAnnotations.Schema;
 using Newtonsoft.Json;
 using System;
 
@@ -24,8 +25,9 @@ public class DeviceLog
     public float Sound { get; set; }
     [Required]
     [ValidateDate(ErrorMessage="Invalid date. (Or are you a medieval time traveller? )")]
+    [Column("Time", Order=0)]
     public DateTime Time { get; set; }
-    [JsonIgnore]
+    [JsonIgnore]    
     public virtual Device Device { get; set; }
 
 }
