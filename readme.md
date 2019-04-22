@@ -48,17 +48,16 @@ Humidity: your humidity sensor, keep in mind that this field is capped between *
 Sound: your sound sensor, keep in mind that this field is capped between *0.0-150.0*
 
 
-Don't leave your DeviceName empty!
-
 You'll receive this response indicating that your request is successfully processed
 
 ```
 {
-    "deviceId":3,
-    "deviceName":"testing2",
-    "lat":-6.97302,
-    "long":107.629166,
-    "deviceLogs":null
+    "no":5,
+    "deviceId":1,
+    "temperature":25.8,
+    "humidity":0.5,
+    "sound":12.0,
+    "time":"2019-04-22T22:25:08.2616721+08:00"
 }
 ```
 

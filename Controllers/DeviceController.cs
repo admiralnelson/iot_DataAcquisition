@@ -30,14 +30,14 @@ public class DeviceController : ControllerBase
     [HttpPost]
     public async Task<IActionResult> PostLog([FromBody]DeviceLog log)
     {
+        log.Time = DateTime.Now;
         if(ModelState.IsValid)
         {
             var checkIfExist = _dbcontext.Devices.Where(x=>x.DeviceId == log.DeviceId).Count() > 0;
             if(!checkIfExist)
             {
                 return BadRequest("Unable to find device id " +  log.DeviceId);
-            }
-            log.Time = DateTime.Now;
+            }            
             await _dbcontext.AddAsync(log);
             _dbcontext.SaveChanges();
             return new ObjectResult(log);

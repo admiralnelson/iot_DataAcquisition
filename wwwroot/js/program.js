@@ -233,12 +233,12 @@ function MakeDropPinAndInterpolation() {
             new google.maps.Marker({
                 position: latlng,
                 map: g_map,
-                title: `
-    Temperatur: ${i.deviceLogs[i.deviceLogs.length - 1].temperature} C, 
-    Humid: ${i.deviceLogs[i.deviceLogs.length - 1].humidity} %, 
-    sound: ${i.deviceLogs[i.deviceLogs.length - 1].sound} dB
-    date: ${i.deviceLogs[i.deviceLogs.length - 1].time}`
+                title: `${i.deviceName}`
             });
+            var sel = document.createElement("option");
+            sel.innerHTML = "Perangkat " + i.deviceName;
+            sel.value = i.deviceId;
+            document.getElementById("deviceSelector").appendChild(sel);  
         }
         g_data = data;
         /*new google.maps.Marker({
@@ -252,11 +252,7 @@ function MakeDropPinAndInterpolation() {
             map: g_map,
             radius: 30
         });
-
-        var sel = document.createElement("option");
-        sel.innerHTML = "Perangkat " + i.deviceName;
-        sel.value = i.deviceId;
-        document.getElementById("deviceSelector").appendChild(sel);        
+      
     }
 
     Ajax("GET", "/Device/GetAll", RetrieveData);    
