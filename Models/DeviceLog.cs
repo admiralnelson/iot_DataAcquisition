@@ -23,7 +23,7 @@ public class DeviceLog
     [Required]
     [Range(0,150, ErrorMessage="Invalid range: 0-150db")]
     public float Sound { get; set; }
-    [Required]
+    
     [ValidateDate(ErrorMessage="Invalid date. (Or are you a medieval time traveller? )")]
     [Column("Time", Order=0)]
     public DateTime Time { get; set; }

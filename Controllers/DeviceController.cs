@@ -36,7 +36,8 @@ public class DeviceController : ControllerBase
             if(!checkIfExist)
             {
                 return BadRequest("Unable to find device id " +  log.DeviceId);
-            }            
+            }
+            log.Time = DateTime.Now;
             await _dbcontext.AddAsync(log);
             _dbcontext.SaveChanges();
             return new ObjectResult(log);
