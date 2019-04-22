@@ -48,7 +48,7 @@ Humidity: your humidity sensor, keep in mind that this field is capped between *
 Sound: your sound sensor, keep in mind that this field is capped between **0.0-150.0**     
 
 
-You'll receive this response indicating that your request is successfully processed   
+You'll receive this response indicates that your request is successfully processed   
 
 ```
 {
