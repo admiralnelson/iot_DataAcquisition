@@ -12,9 +12,9 @@ and following JSON in the request body:
 }
 
 ```
-Lat: global latitude position, Long: global longitude position
-Use google map to find out your desired lat and long.
-**Don't leave your DeviceName empty!**
+Lat: global latitude position, Long: global longitude position    
+Use google map to find out your desired lat and long.   
+**Don't leave your DeviceName empty!**   
 
 You'll receive this response indicating that your request is successfully processed
 
