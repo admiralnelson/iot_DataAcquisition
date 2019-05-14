@@ -21,9 +21,9 @@ public class Device
     [Required]
     public string DeviceName { get; set; }
     [Required]
-    public float Lat { get; set; }
+    public double Lat { get; set; }
     [Required]
-    public float Long { get; set; }
+    public double Long { get; set; }
     public virtual List<DeviceLog> DeviceLogs
     {
         get => _lazyLoader.Load(this, ref _DeviceLogs);
